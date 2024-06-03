@@ -1,0 +1,83 @@
+.home
+{
+    height: 800px;
+    background: url("./img/formula.png") ;
+    background-size: 130%;
+    background-position: -300px -600px;
+    background-color: rgba(15, 8, 15, 0.4);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.home-box
+{
+    padding-bottom: 300px;
+}
+.home-box h1
+{
+    padding-bottom: 20px;
+}
+/*Wheel*/
+.wheel-part
+{
+    background: url("./img/wheel.png") no-repeat;
+    background-size: cover;
+    background-color: rgba(15, 8, 15, 0.9);
+    background-blend-mode: multiply;
+    height: 800px;
+    z-index: -2;
+
+}
+.wheel-part .container
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+.wheel-box
+{
+    padding-top: 150px;
+}
+.wheel-box h1
+{
+    padding-bottom: 20px;
+}
+
+/*Contacts*/
+.contacts-part
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./img/lando.png")  no-repeat;
+    background-size: cover;
+    height: 800px;
+    background-color: rgba(15, 8, 15, 0.70);
+    background-blend-mode: multiply;
+}
+.contacts-box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts-form
+{
+    box-sizing: border-box;
+}
+.contacts-form textarea
+{
+    height: 150px;
+}
+.contacts-form input,
+.contacts-form button,
+.contacts-form textarea
+{
+    margin: 20px;
+}

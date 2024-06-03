@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    font-family: "Inter", sans-serif;
+    background: #0F080F;
+    color: #FFF7FD;
+    margin: 0;
+}
+
+/*States*/
+.fixed
+{
+    transition: .5s;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.show
+{
+    opacity: 1;
+    transition: .5s;
+}
+.hide
+{
+    opacity: 0;
+    transition: .5s;
+}
+/*Animate*/
+[class*="__animate__"] {
+    opacity: 0;
+    transition: 3s;
+    transform: translateY(100px);
+}
+.animate
+{
+    transform: translateY(0px);
+
+    opacity: 1;
+    transition: 3s;
+}
+.__animate__right
+{
+    transform: translateX(-100px);
+
+    opacity: 0;
+    transition: 3s;
+}
+.animate__right
+{
+    transform: translateY(0px);
+
+    opacity: 1;
+    transition: 3s;
+}
+.__animate__left
+{
+    transform: translateX(100px);
+
+    opacity: 0;
+    transition: 3s;
+}
+.animate__left
+{
+    transform: translateY(0px);
+
+    opacity: 1;
+    transition: 3s;
+}
+/*Text*/
+h1
+{
+    font-size: 48px;
+    margin: 0;
+
+}
+h2
+{
+    font-size: 36px;
+    margin: 0;
+
+}
+h3
+{
+    font-size: 24px;
+    margin: 0;
+
+}
+h4
+{
+    font-size: 18px;
+    margin: 0;
+
+}
+h5
+{
+    font-size: 16px;
+    margin: 0;
+
+}
+h6
+{
+    font-size: 14px;
+    margin: 0;
+
+}
+.long-letters
+{
+    letter-spacing: .25em;
+}
+.citation
+{
+    text-align: left;
+    display: flex;
+    font-size: 14px;
+    font-style: italic;
+    color: #c5c0c3;
+}
+/*Buttons*/
+button
+{
+    text-transform: uppercase;
+    font-size: 24px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #B61105;
+    color: #B61105;
+    padding: 8px 32px;
+    transition: .5s;
+
+}
+button:hover
+{
+    cursor: pointer;
+    background: #B61105;
+    color: #FFF7FD;
+    transition: .5s;
+}
+/*Forms*/
+
+input
+{
+    font-size: 18px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #B61105;
+    color: #FFF7FD;
+    padding: 8px 16px;
+    transition: .5s;
+}
+input:focus
+{
+    outline: none!important;
+    background: rgba(182, 17, 5, 0.44);
+}
+form
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.form-part
+{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    box-sizing: border-box;
+}
+textarea
+{
+    font-size: 18px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #B61105;
+    color: #FFF7FD;
+    resize: none;
+    padding: 8px 16px;
+    transition: .5s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+textarea:focus
+{
+    outline: none!important;
+    background: rgba(182, 17, 5, 0.44);
+}
+button
+{
+    cursor: pointer;
+
+}
+/*Footer*/
+header
+{
+    background: transparent;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+header.fixed
+{
+    background: #0F080F;
+    transition: .5s;
+}
+header .container
+{
+    background: transparent;
+    padding: 40px 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+nav
+{
+    background: transparent;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+nav a
+{
+    color: #FFF7FD;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .5s;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+}
+nav a:hover:before
+{
+    transition: .5s;
+    content: "";
+    display: block;
+    width: 75%;
+    height: 2px;
+    background: #E01506;
+    position: absolute;
+    bottom: -5px;
+}
+nav a:hover
+{
+    transition: .5s;
+    color: #E01506;
+}
+
+/*Main*/
+.container
+{
+    width: 1280px;
+    margin: 0 auto;
+
+}
+
+/*Footer*/
+footer
+{
+    text-align: center;
+    color:#B61105;
+}
+.footer-main
+{
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-bottom
+{
+    padding: 10px;
+}
