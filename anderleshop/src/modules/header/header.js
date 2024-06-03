@@ -10,11 +10,11 @@ const Header = () => {
             <div className={"container"}>
                 <img src={logo} alt="" className={"logo"}/>
                 <div className={"nav"}>
-                    <NavLink path={"/"} title={"Home"}/>
-                    <NavLink path={"/"} title={"Contacts"}/>
-                    <NavLink path={"/"} title={"About us"}/>
-                    <NavLink path={"/"} title={"Catalogue"}/>
-                    <NavPhoto path={"/"} photo={cart}/>
+                    <NavLink path={"/home"} title={"Home"}/>
+                    <NavLink path={"/contacts"} title={"Contacts"}/>
+                    <NavLink path={"/aboutus"} title={"About us"}/>
+                    <NavLink path={"/catalogue"} title={"Catalogue"}/>
+                    <NavPhoto path={"/cart"} photo={cart}/>
                 </div>
             </div>
         </div>
