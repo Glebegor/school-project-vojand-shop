@@ -79,6 +79,9 @@
 }
 
 /* Text */
+.h1 {
+    font-size: 56px;
+}
 .long-letters
 {
     letter-spacing: .25em;
