@@ -1,0 +1,48 @@
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    height: 75px;
+}
+
+/* nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: .5s;
+    text-decoration: none;
+    color: var(--main-white);
+
+    margin: 10px 10px;
+}
+.nav a.active,
+.nav a:hover {
+    transition: .5s;
+    color: var(--main-red);
+}
+.nav a.active:before,
+.nav a:hover:before {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 2px;
+    background-color: var(--main-red);
+    bottom: -5px;
+}
+
+
+.cart {
+    width: 30px;
+    margin-left: 25px;
+}

@@ -1,0 +1,100 @@
+/* Main variables*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    --main-black: #0F080F;
+    --main-red-black: #940E04;
+    --main-red: #B61105;
+    --main-red-white: #E01506;
+    --main-white: #FFF7FD;
+
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+
+}
+
+/* triggers*/
+.fixed
+{
+    transition: .5s;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.show
+{
+    opacity: 1;
+    transition: .5s;
+}
+.hide
+{
+    opacity: 0;
+    transition: .5s;
+}
+
+/*Animate*/
+[class*="__animate__"] {
+    opacity: 0;
+    transition: 3s;
+    transform: translateY(100px);
+}
+.animate
+{
+    transform: translateY(0px);
+
+    opacity: 1;
+    transition: 3s;
+}
+.__animate__right
+{
+    transform: translateX(-100px);
+
+    opacity: 0;
+    transition: 3s;
+}
+.animate__right
+{
+    transform: translateY(0px);
+
+    opacity: 1;
+    transition: 3s;
+}
+.__animate__left
+{
+    transform: translateX(100px);
+
+    opacity: 0;
+    transition: 3s;
+}
+.animate__left
+{
+    transform: translateY(0px);
+
+    opacity: 1;
+    transition: 3s;
+}
+
+/* Text */
+.long-letters
+{
+    letter-spacing: .25em;
+}
+.citation
+{
+    text-align: left;
+    display: flex;
+    font-size: 14px;
+    font-style: italic;
+    color: #c5c0c3;
+}
+
+/* Main */
+
+body {
+    background-color: var(--main-black);
+    color: var(--main-white);
+}
