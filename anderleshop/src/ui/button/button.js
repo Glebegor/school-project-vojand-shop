@@ -1,8 +1,8 @@
-
+import "./main.css";
 
 const Button = ( ) => {
     return (
-        <button>Buy now</button>
+        <button className={"mainButton"}>Buy now</button>
     )
 }
 

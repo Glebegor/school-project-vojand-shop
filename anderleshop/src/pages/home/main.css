@@ -13,10 +13,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .homeMain .container .h1 {
-    padding-bottom: 400px;
+    padding-bottom: 40px;
+}
+.homeMain .container button {
+    margin-bottom: 400px;
 }
 .homeQuality
 {
