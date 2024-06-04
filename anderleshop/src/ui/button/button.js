@@ -1,8 +1,8 @@
 import "./main.css";
 
-const Button = ( ) => {
+const Button = ({title}) => {
     return (
-        <button className={"mainButton"}>Buy now</button>
+        <button className={"mainButton"}>{title}</button>
     )
 }
 
