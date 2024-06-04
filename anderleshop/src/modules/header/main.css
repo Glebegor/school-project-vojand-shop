@@ -10,6 +10,23 @@
 }
 
 /* nav */
+.navWrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navWrapper a img {
+    height: 30px;
+    margin-left: 25px;
+    transition: .5s;
+
+}
+.navWrapper a img:hover {
+    transition: .5s;
+    transform: scale(1.1);
+}
+
 .nav {
     display: flex;
     justify-content: space-between;

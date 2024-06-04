@@ -8,6 +8,7 @@
     --main-red-white: #E01506;
     --main-white: #FFF7FD;
 
+
     padding: 0px;
     margin: 0px;
     font-family: "Inter", sans-serif;
@@ -79,6 +80,9 @@
 }
 
 /* Text */
+.h1 {
+    font-size: 48px;
+}
 .long-letters
 {
     letter-spacing: .25em;

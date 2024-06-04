@@ -1,0 +1,117 @@
+.slider-citates
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.slider-wrapper
+{
+    overflow: hidden;
+    width: 100%;
+}
+.slider-tape
+{
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+.slider-item
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .2;
+    min-width: 33%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.slider-item.active
+{
+    opacity: 1;
+
+    transform: scale(1.4);
+}
+.slider-item-text
+{
+    text-align: left;
+}
+
+.slider-buttons
+{
+    margin-top: 50px;
+    position:relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-button
+{
+    cursor: pointer;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.slider-button:hover:after
+{
+    transition: .5s;
+    border-top: 3px solid var(--main-white);
+    border-left: 3px solid var(--main-white);
+}
+.slider-button:after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    border-top: 3px solid var(--main-red);
+    border-left: 3px solid var(--main-red);
+}
+
+.slider-button-prev:after
+{
+    rotate: -45deg;
+}
+.slider-button-next:after
+{
+    rotate: 135deg;
+}
+
+
+.slider-points
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.slider-point
+{
+    transition: .3s;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: .2;
+    background-color: var(--main-white);
+    margin: 0 5px;
+}
+
+.slider-point.active
+{
+    transition: .3s;
+    opacity: 1;
+}

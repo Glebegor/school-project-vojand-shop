@@ -1,0 +1,24 @@
+.mainButton {
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background: var(--main-red);
+    border: none;
+    border-radius: 15px;
+    color: var(--main-white);
+
+    transition: .5s;
+
+}
+
+.mainButton:hover {
+    letter-spacing: .25em;
+    transform: scale(1.1);
+    background: var(--main-white);
+    color: var(--main-red);
+
+
+    transition: .5s;
+}
+
