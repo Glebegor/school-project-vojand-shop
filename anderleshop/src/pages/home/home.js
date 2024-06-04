@@ -1,5 +1,6 @@
 import "./main.css";
 import LinkButton from "../../components/linkButton/linkButton";
+import SliderCitates from "../../modules/sliderCitates/sliderCitates";
 
 const Home = () => {
     return (
@@ -16,7 +17,11 @@ const Home = () => {
                     <LinkButton path={"/catalogue"} title={"Test quality"}/>
                 </div>
             </section>
-            <section className={"homeComments"}>3</section>
+            <section className={"homeComments"}>
+                <div className={"container"}>
+                    <SliderCitates />
+                </div>
+            </section>
             <section className={"contacts"}>4</section>
         </div>
     )
