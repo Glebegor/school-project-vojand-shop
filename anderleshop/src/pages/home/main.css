@@ -5,5 +5,48 @@
     align-items: center;
     justify-content: center;
     background: url("./images/formula.png");
+    background-size: 100% 120%;
+    background-position: 0px -400px;
+    height: 120vh;
+}
+.homeMain .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.homeMain .container .h1 {
+    padding-bottom: 400px;
+}
+.homeQuality
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/wheel.png");
+    background-size: 100% 100%;
+    background-position: 0px 00px;
+    height: 100vh;
+}
+.homeComments
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: 0px 0px;
+    height: 50vh;
+
+}
+.contacts
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/lando.png");
+    background-size: 100% 100%;
+    background-position: 0px 0px;
     height: 100vh;
 }
