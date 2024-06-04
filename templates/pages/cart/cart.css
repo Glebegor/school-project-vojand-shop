@@ -1,9 +1,8 @@
 #stuff {
-    background-color:#B61105;
-    opacity: 0.2; 
+    background-color:#B6110541;
     margin: auto;
     border-radius: 25px;
-    width: 50%;
+    width: 0%;
     height: 60%;
 }
 #menu{
@@ -13,10 +12,16 @@
 }
 
 #menu p {
-    padding: 20px;
+    padding: 5%;
 }
 #images img{
-    padding: 20px;
-    padding-left: 50px;
-    opacity: 2;
+    padding: 5%;
+    padding-left: 13%;
+    width: 50%;
+    height: 60%;
+}
+main{
+    background-image: url("../images/AudiF1CarIsGoated.png");
+    background-position: center;
+    padding-bottom: 20px;
 }
