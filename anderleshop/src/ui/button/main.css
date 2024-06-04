@@ -3,18 +3,22 @@
     outline: none;
     padding: 10px 20px;
     text-transform: uppercase;
-    background: transparent;
-    border: 3px solid var(--main-red);
-    color: var(--main-red);
+    background: var(--main-red);
+    border: none;
+    border-radius: 15px;
+    color: var(--main-white);
+
     transition: .5s;
 
 }
 
 .mainButton:hover {
-    background: var(--main-red);
-    color: var(--main-white);
-    transform: translateX(-10px);
-    box-shadow: 10px 0px 0px var(--main-white);
+    letter-spacing: .25em;
+    transform: scale(1.1);
+    background: var(--main-white);
+    color: var(--main-red);
+
+
     transition: .5s;
 }
 

@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
     background: url("./images/formula.png");
+    background-blend-mode: multiply;
+    background-color: rgba(15, 8, 15, 0.24);
     background-size: 100% 120%;
     background-position: 0px -400px;
     height: 120vh;
@@ -14,11 +16,17 @@
     flex-direction: column;
     align-items: center;
 }
-.homeMain .container .h1 {
-    padding-bottom: 40px;
+.homeMain .container .h1,
+.homeQuality .container .h1{
+    font-weight: 800;
+    font-size: 42px;
+
+    padding-bottom: 20px;
 }
-.homeMain .container button {
+.homeMain .container button,
+.homeQuality .container button {
     margin-bottom: 400px;
+    font-size: 16px;
 }
 .homeQuality
 {
