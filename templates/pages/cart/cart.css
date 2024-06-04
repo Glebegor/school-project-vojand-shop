@@ -11,3 +11,7 @@
     justify-content: center;
     margin-top: 20px;
 }
+
+#menu p {
+    padding: 20px;
+}
