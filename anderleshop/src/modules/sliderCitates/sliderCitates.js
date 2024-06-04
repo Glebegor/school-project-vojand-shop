@@ -2,6 +2,14 @@ import "./main.css"
 import SliderCitatesItem from "../../components/sliderCitatesItem/sliderCitatesItem";
 
 const SliderCitates = () => {
+    // Slider logic
+
+    const prevButton = document.querySelector(".slider-button-prev")
+    const nextButton = document.querySelector(".slider-button-next")
+
+    nextButton.addEventListener("click", () => {console.log("next")})
+    // prevButton.addEventListener("click", () => {console.log("prev")})
+
     return (
         <div className={"slider-citates"}>
             <div className={"slider-wrapper"}>
@@ -13,12 +21,15 @@ const SliderCitates = () => {
                 </div>
             </div>
             <div className={"slider-buttons"}>
-                <div className={"slider-button slider-button-prev"}>Prev</div>
-                <div className={"slider-button slider-button-next"}>Next</div>
+                <button className={"slider-button slider-button-prev"}></button>
+                <div className={"slider-points"}>
+                    <div className={"slider-point"}></div>
+                    <div className={"slider-point"}></div>
+                    <div className={"slider-point"}></div>
+                </div>
+                <button className={"slider-button slider-button-next"}></button>
             </div>
-            <div className={"slider-points"}>
 
-            </div>
         </div>
 
     )

@@ -3,6 +3,7 @@ import LinkButton from "../../components/linkButton/linkButton";
 import SliderCitates from "../../modules/sliderCitates/sliderCitates";
 
 const Home = () => {
+
     return (
         <div>
             <section className={"homeMain"}>
