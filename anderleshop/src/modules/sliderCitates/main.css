@@ -14,6 +14,7 @@
 }
 .slider-tape
 {
+    transition: .5s;
     display: flex;
     align-items: center;
     min-width: 100%;
@@ -99,6 +100,7 @@
 }
 .slider-point
 {
+    transition: .3s;
     cursor: pointer;
     width: 10px;
     height: 10px;
@@ -106,4 +108,10 @@
     opacity: .2;
     background-color: var(--main-white);
     margin: 0 5px;
+}
+
+.slider-point.active
+{
+    transition: .3s;
+    opacity: 1;
 }
