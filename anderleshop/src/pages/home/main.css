@@ -22,9 +22,15 @@
     align-items: center;
     justify-content: center;
 }
-
+.homeContacts .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .homeMain .container .h1,
-.homeQuality .container .h1{
+.homeQuality .container .h1,
+.homeContacts .container h1{
     font-weight: 800;
     font-size: 42px;
 
@@ -65,7 +71,7 @@
     height: 50vh;
 
 }
-.contacts
+.homeContacts
 {
     display: flex;
     flex-direction: column;
@@ -73,6 +79,11 @@
     justify-content: center;
     background: url("./images/lando.png");
     background-size: 100% 100%;
+    background-blend-mode: multiply;
+    background-color: rgba(15, 8, 15, 0.65);
     background-position: 0px 0px;
     height: 100vh;
+}
+.homeContacts input {
+    padding: 10px 20px;
 }

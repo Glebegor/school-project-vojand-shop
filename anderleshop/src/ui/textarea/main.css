@@ -1,0 +1,9 @@
+.textareaMain
+{
+    resize: none;
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}

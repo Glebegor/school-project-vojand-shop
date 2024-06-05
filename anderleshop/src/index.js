@@ -6,16 +6,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/layout/layout";
 import Home from "./pages/home/home";
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout />}>s
           <Route path="home" element={<Home />} />
           <Route path="/" element={<Home />} />
 
-          <Route path="catalogue" element={<Home />} />
+          <Route path="catalogue" element={<Home />} />sss
           <Route path="catalogueItem" element={<Home />} />
 
           <Route path="cart" element={<Home />} />
