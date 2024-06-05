@@ -12,7 +12,7 @@ const CatItem = ({ img, title, rating, descrition, id , price}) => {
         }
     }
     return (
-        <div className={"catItem"}>
+        <div className={"catItem "}>
             <div className={"catItemImg"}>
                 <img src={"https://uploads.audi-mediacenter.com/system/production/media/119075/images/f4076741890dadd6938f83a773476bf2ea4dede8/A234333_web_1920.jpg?1698538264"} alt=""/>
             </div>

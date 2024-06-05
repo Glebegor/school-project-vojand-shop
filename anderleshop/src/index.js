@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/layout/layout";
 import Home from "./pages/home/home";
 import Catalogue from "./pages/catalogue/catalogue";
+import Contacts from "./pages/contacts/contacts";
+import AboutUs from "./pages/aboutus/aboutUs";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,9 +23,11 @@ root.render(
           <Route path="catalogue" element={<Catalogue />} />sss
           <Route path="catalogueItem" element={<Home />} />
 
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="aboutus" element={<AboutUs />} />
+
           <Route path="cart" element={<Home />} />
-          <Route path="contacts" element={<Home />} />
-          <Route path="aboutus" element={<Home />} />
+          <Route path="anderlehaus" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

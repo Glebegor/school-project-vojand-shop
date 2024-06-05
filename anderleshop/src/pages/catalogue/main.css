@@ -2,11 +2,6 @@
 {
 }
 
-/* Slider */
-.catalogueSlider
-{
-
-}
 
 /*Shopper*/
 .catalogueShopper {
@@ -89,7 +84,7 @@
     background: var(--main-white-lowest);
 
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
     flex-wrap: wrap;
 

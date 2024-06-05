@@ -35,7 +35,7 @@ const Filters = () => {
                 </div>
 
             </div>
-            <Button title={"Apply"}/>
+            <Button onClick={() => {}} title={"Apply"}/>
         </div>
     );
 }
