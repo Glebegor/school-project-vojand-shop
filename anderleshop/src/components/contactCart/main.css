@@ -10,7 +10,8 @@
 }
 .contacts-cart:hover
 {
-    transform: scale(1.2) rotate(360deg);
+    z-index: 3333;
+    transform: scale(1.2) rotate(360deg)!important;
 }
 .contacts-cart:hover h1
 {

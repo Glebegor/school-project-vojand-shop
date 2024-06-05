@@ -14,9 +14,9 @@ const Contacts = () => {
     return (
         <div className={"contacts"}>
             <div className="container">
-                <ContactCart place={1} img={Anderle} name={"Vojta Anderle"} position={"Promoter, marketing-manager"} email={"vojta.anderle08@gmail.com"} tel={"+420 556 678 093"} titul={"Retired 8-Time FCWC"}/>
-                <ContactCart place={2} img={Foltin} name={"Matěj Foltín"} position={"Noname"} email={"matej.foltin@gmail.com"} tel={"+420 774 286 897"} titul={"Current World Champion of the FCWC"}/>
-                <ContactCart place={3} img={Arseniuk} name={"Hlib Arseniuk"} position={"Full-Stack developer"} email={"hlib.arseniuk.work@gmail.com"} tel={"+420 349 834 222"} titul={"Developer of Anderle OS"}/>
+                <ContactCart animate={"__animate__right"} place={1} img={Anderle} name={"Vojta Anderle"} position={"Promoter, marketing-manager"} email={"vojta.anderle08@gmail.com"} tel={"+420 556 678 093"} titul={"Retired 8-Time FCWC"}/>
+                <ContactCart animate={"__animate__"}place={2} img={Foltin} name={"Matěj Foltín"} position={"Noname"} email={"matej.foltin@gmail.com"} tel={"+420 774 286 897"} titul={"Current World Champion of the FCWC"}/>
+                <ContactCart animate={"__animate__left"}place={3} img={Arseniuk} name={"Hlib Arseniuk"} position={"Full-Stack developer"} email={"hlib.arseniuk.work@gmail.com"} tel={"+420 349 834 222"} titul={"Developer of Anderle OS"}/>
 
             </div>
         </div>

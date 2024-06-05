@@ -1,8 +1,8 @@
 import "./main.css";
 
-const ContactCart = ({place, img, name, position, email, tel, titul, link}) => {
+const ContactCart = ({place, img, name, position, email, tel, titul, link, animate}) => {
     return (
-        <a href={link} className="contacts-cart">
+        <a href={link} className={"contacts-cart " + animate}>
             <div className="contacts-cart-profile">
                 <h1>#{place}</h1>
                 <img src={img} alt=""/>
