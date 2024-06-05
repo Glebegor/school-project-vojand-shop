@@ -1,38 +1,87 @@
+/* AnderleHaus.css */
+
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color:black ;
-  }
+  background-color: black;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+/*Main*/
+main {
+  padding: 30px 0;
+}
+
+.left-column {
+  width: 45%;
+  float: left;
+  padding-right: 30px;
+}
+
+.right-column {
+  width: 55%;
+  float: right;
+  padding-left: 30px;
+}
+
+.info-text {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.info-text strong {
+  font-weight: bold;
+}
+
+.map-container {
+  text-align: center;
+}
+
+.map {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsive design */
+@media screen and (max-width: 800px) {
   .container {
-    display: flex;
+      width: 90%;
   }
+
   .left-column {
-    width: 50%;
-    padding: 20px;
-    color: aliceblue;
+      width: 100%;
+      float: none;
+      padding-right: 0;
   }
+
   .right-column {
-    width: 50%;
-    padding: 20px;
+      width: 100%;
+      float: none;
+      padding-left: 0;
   }
-  h1 {
-    margin-top: 0;
-  }
-  .info-text {
-    margin-bottom: 20px;
-  }
-  ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
+
   .map-container {
-    display: flex;
-    justify-content: center;
+      margin-top: 20px;
   }
-  .map {
-    width: 100%;
-    max-width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-box {
+      flex-direction: column;
   }
-  .Red-Bull-Store{
-    width: 50px;
+
+  .footer-main {
+      flex-direction: column;
+      align-items: flex-start;
   }
+
+  .footer-main div {
+      margin-bottom: 10px;
+  }
+}
