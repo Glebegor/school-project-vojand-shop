@@ -1,0 +1,52 @@
+.catItem
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 31%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.catItemImg
+{
+    height: 150px;
+    width: 100%;
+}
+.catItemImg img
+{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.catItemDescrition
+{
+    background: var(--main-white);
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.catItemText
+{
+    font-size: 14px;
+    color: var(--main-black-lowest);
+}
+.catItemRating
+{
+
+}
+.catItemRating img
+{
+    height: 20px;
+}
+
+.catItemAbove
+{
+    padding-top: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}

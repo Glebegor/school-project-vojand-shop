@@ -1,9 +1,10 @@
 import "./main.css";
 import LinkButton from "../../components/linkButton/linkButton";
 import SliderCitates from "../../modules/sliderCitates/sliderCitates";
+import FormContacts from "../../modules/formContacts/formContacts";
+import {useEffect} from "react";
 
 const Home = () => {
-
     return (
         <div>
             <section className={"homeMain"}>
@@ -23,7 +24,12 @@ const Home = () => {
                     <SliderCitates />
                 </div>
             </section>
-            <section className={"contacts"}>4</section>
+            <section className={"homeContacts"}>
+                <div className={"container"}>
+                    <h1 className={"long-letters"}>Contacts</h1>
+                    <FormContacts/>
+                </div>
+            </section>
         </div>
     )
 }

@@ -1,0 +1,13 @@
+.filters
+{
+    color: var(--main-black);
+}
+.filters-el
+{
+    padding-bottom: 10px;
+}
+.filters-title {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+}
