@@ -1,0 +1,20 @@
+.contacts
+{
+    height: 100vh;
+}
+.contacts .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.contacts-cart
+{
+    width: 33%;
+    height: 200px;
+    border-radius: 20px;
+    background: var(--main-red);
+    margin: 20px;
+    box-sizing: border-box;
+}
