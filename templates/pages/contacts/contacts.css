@@ -1,36 +1,62 @@
 body {
-    background-color: black;
-  }
-  
-  .card {
-    background-color: red;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 10px;
-    width: 250px;
-  }
-  
-  .card h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    margin-bottom: 5px;
-  }
-  
-  .card img {
-    width: 100px;
-    position: absolute;
+  background-color: black;
+}
 
-  }
-.contactsWrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card {
+  transition: .3s;
+
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #B61105;
+  color: #FFF7FD;
+  border-radius: 10px;
+  margin: 10px;
+  width: 25%;
 }
-.horni{
+.card:hover img{
+  transform: scale(1.3) translateY(-23px);
+}
+.card:hover {
+  transform:  scale(1.2) rotate(360deg);
+}
+.card h1 {
+  opacity: .3;
+  font-size: 58px;
+}
+.card h2 {
+  z-index: 2;
+
+  bottom: 10px;
+  position: absolute;
+  font-size: 30px;
+}
+
+
+.card img {
+  transition: .5s;
+  z-index: 0;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.cart-up 
+{
+  height: 120px;
   position: relative;
+  padding: 20px 20px 0px 20px;
 }
+.cart-down {
+  z-index: 2000;
+  padding: 20px;
+  border-top: 10px solid #FFF7FD;
+  text-align: left;
+}
+
+.contactsWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
