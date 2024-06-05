@@ -1,8 +1,8 @@
 import "./main.css";
 
-const ContactCart = ({place, img, name, position, email, tel, titul}) => {
+const ContactCart = ({place, img, name, position, email, tel, titul, link}) => {
     return (
-        <div className="contacts-cart">
+        <a href={link} className="contacts-cart">
             <div className="contacts-cart-profile">
                 <h1>#{place}</h1>
                 <img src={img} alt=""/>
@@ -14,7 +14,7 @@ const ContactCart = ({place, img, name, position, email, tel, titul}) => {
                 <div>{tel}</div>
                 <div>{titul}</div>
             </div>
-        </div>
+        </a>
     )
 }
 
