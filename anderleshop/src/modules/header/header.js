@@ -8,10 +8,10 @@ const Header = () => {
     return (
         <div className={"header"}>
             <div className={"container"}>
-                <img src={logo} alt="" className={"logo"}/>
+                <a href={"/"}><img src={logo} alt="" className={"logo"}/></a>
                 <div className={"navWrapper"}>
                     <div className={"nav"}>
-                        <NavLink path={"/home"} title={"Home"}/>
+                        <NavLink path={"/anderlehaus"} title={"Anderlehaus"}/>
                         <NavLink path={"/contacts"} title={"Contacts"}/>
                         <NavLink path={"/aboutus"} title={"About us"}/>
                         <NavLink path={"/catalogue"} title={"Catalogue"}/>

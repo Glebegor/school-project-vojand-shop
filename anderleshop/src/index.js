@@ -8,6 +8,7 @@ import Home from "./pages/home/home";
 import Catalogue from "./pages/catalogue/catalogue";
 import Contacts from "./pages/contacts/contacts";
 import AboutUs from "./pages/aboutus/aboutUs";
+import Anderlehaus from "./pages/anderlehaus/anderlehaus";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,13 +22,14 @@ root.render(
           <Route path="/" element={<Home />} />
 
           <Route path="catalogue" element={<Catalogue />} />sss
-          <Route path="catalogueItem" element={<Home />} />
 
           <Route path="contacts" element={<Contacts />} />
           <Route path="aboutus" element={<AboutUs />} />
+          <Route path="anderlehaus" element={<Anderlehaus />} />
 
+
+          <Route path="catalogueItem" element={<Home />} />
           <Route path="cart" element={<Home />} />
-          <Route path="anderlehaus" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
