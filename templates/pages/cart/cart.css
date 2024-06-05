@@ -2,8 +2,14 @@
     background-color:#B6110541;
     margin: auto;
     border-radius: 25px;
-    width: 0%;
-    height: 60%;
+    width: 55%;
+    height: 70%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 #menu{
     display: flex;
@@ -15,13 +21,47 @@
     padding: 5%;
 }
 #images img{
-    padding: 5%;
-    padding-left: 13%;
-    width: 50%;
-    height: 60%;
+    padding-left: 10%;
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
 }
 main{
     background-image: url("../images/AudiF1CarIsGoated.png");
     background-position: center;
     padding-bottom: 20px;
+}
+.imgDescription{
+    background-color: #ffffff;
+    color: black;
+    width: 40%;
+    height: 50%;
+    margin: 0;
+}
+#cartName{
+    color:#E01506;
+    text-decoration: underline;
+}
+#continueButton{
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 2%;
+    margin: auto;
+    align-items: center;
+    color: #ffffff;
+}
+#total{
+    font-size: 24;
+}
+.informationBox{
+    display: flex;
+}
+.productName{
+    vertical-align: text-top;
+    text-align: left;
+    padding: 0%;
+    font-size: 80%;
 }
