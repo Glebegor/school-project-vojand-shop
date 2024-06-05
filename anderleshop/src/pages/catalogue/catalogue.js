@@ -4,12 +4,12 @@ import Input from "../../ui/input/input";
 import logoPhoto from "./images/logo.png";
 import CatItem from "../../components/catItem/catItem";
 import Filters from "../../modules/filters/filters";
+import SliderCatalogue from "../../modules/sliderCatalogue/sliderCatalogue";
 
 const Catalogue = () => {
     return (
         <div className={"catalogue"}>
-            <div className="catalogueSlider">
-            </div>
+            <SliderCatalogue/>
             <div className="catalogueShopper container">
                 <div className="catalogueShopperSearcher">
                     <div className="catalogueShopperSearcherFilterBy">Filter by lower Price</div>
