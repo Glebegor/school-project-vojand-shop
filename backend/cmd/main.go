@@ -12,6 +12,7 @@ func main() {
 	config := app.Config
 	db := app.DB
 	gin := gin.Default()
+	gin.Use(bootstrap.CORS())
 	timeout := 10 * time.Second
 	//
 	controllers.SetupController(config, gin, db, timeout)
