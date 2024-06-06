@@ -43,7 +43,7 @@ func (ct *productController) CreateProduct(c *gin.Context) {
 		return
 	}
 
-	err := ct.usecase.Create(&input)
+	err := ct.usecase.Create(input)
 	if err != nil {
 		response := requests.ErrorResponse{
 			Message: err.Error(),
@@ -53,6 +53,10 @@ func (ct *productController) CreateProduct(c *gin.Context) {
 		return
 	}
 
+	response := requests.SuccessResponse{
+		Message: "Created new product successfully",
+	}
+	response.GiveResponse(c)
 	return
 }
 func (ct *productController) GetProduct(c *gin.Context) {

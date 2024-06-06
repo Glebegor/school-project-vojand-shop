@@ -18,8 +18,8 @@ func NewProductUsecase(repo models.ProductRepository, timeout time.Duration) mod
 }
 
 func (u *ProductUsecase) Create(product models.Product) error {
-	u.repo.Create(product)
-	return nil
+	err := u.repo.Create(product)
+	return err
 }
 func (u *ProductUsecase) GetAll() ([]models.Product, error) {
 	return u.repo.GetAll()

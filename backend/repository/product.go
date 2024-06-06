@@ -17,7 +17,7 @@ func NewProductRepository(db *sqlx.DB) models.ProductRepository {
 }
 
 func (r *ProductRepository) Create(product models.Product) error {
-	query := fmt.Sprintf("INSERT INTO product (title, description, price, images, rating) VALUES ('%s', '%s', %d, '%s', %d)", product.Title, product.Description, product.Price, product.Images, product.Rating)
+	query := fmt.Sprintf("INSERT INTO products (title, description, price, images, rating) VALUES ('%s', '%s', %d, '%s', %d)", product.Title, product.Description, product.Price, product.Images, product.Rating)
 	_, err := r.db.Exec(query)
 	return err
 }
