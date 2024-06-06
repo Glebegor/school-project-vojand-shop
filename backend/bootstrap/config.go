@@ -30,7 +30,6 @@ func NewConfig() (*Config, error) {
 	if err := godotenv.Load(); err != nil {
 		return &config, err
 	}
-
 	config = Config{
 		ServerPORT:   viper.GetString("server.port"),
 		ServerHOST:   viper.GetString("server.host"),
@@ -41,5 +40,6 @@ func NewConfig() (*Config, error) {
 		DbPASS:       os.Getenv("DB_PASSWORD"),
 		DbNAME:       viper.GetString("db.name"),
 	}
+
 	return &config, nil
 }
