@@ -7,23 +7,25 @@ import (
 )
 
 type ProductRepository struct {
-	db *sqlx.DB
+	db    *sqlx.DB
+	table string
 }
 
-func NewProductRepository(db *sqlx.DB) models.ProductRepository {
+func NewProductRepository(db *sqlx.DB, table string) models.ProductRepository {
 	return &ProductRepository{
-		db: db,
+		db:    db,
+		table: table,
 	}
 }
 
 func (r *ProductRepository) Create(product models.Product) error {
-	query := fmt.Sprintf("INSERT INTO products (title, description, price, images, rating) VALUES ('%s', '%s', %d, '%s', %d)", product.Title, product.Description, product.Price, product.Images, product.Rating)
+	query := fmt.Sprintf("INSERT INTO %s (title, description, price, images, rating) VALUES ('%s', '%s', %d, '%s', %d)", r.table, product.Title, product.Description, product.Price, product.Images, product.Rating)
 	_, err := r.db.Exec(query)
 	return err
 }
 func (r *ProductRepository) GetAll() ([]models.Product, error) {
 	var data []models.Product
-	query := "SELECT * FROM product"
+	query := fmt.Sprintf("SELECT * FROM %s", r.table)
 	err := r.db.Select(&data, query)
 	return data, err
 }

@@ -17,7 +17,7 @@ type productController struct {
 }
 
 func NewProductController(config *bootstrap.Config, db *sqlx.DB, r *gin.RouterGroup, timeout time.Duration) {
-	tr := repository.NewProductRepository(db)
+	tr := repository.NewProductRepository(db, "products")
 	tu := usecase.NewProductUsecase(tr, timeout)
 	controller := &productController{
 		usecase: tu,
@@ -64,7 +64,21 @@ func (ct *productController) GetProduct(c *gin.Context) {
 	return
 }
 func (ct *productController) GetAllProduct(c *gin.Context) {
+	products, err := ct.usecase.GetAll()
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: err.Error(),
+			Code:    http.StatusBadGateway,
+		}
+		response.GiveResponse(c)
+		return
 
+	}
+	response := requests.SuccessResponseWithData{
+		Message: "Get all product successfully",
+		Data:    products,
+	}
+	response.GiveResponse(c)
 	return
 }
 func (ct *productController) UpdateProduct(c *gin.Context) {
