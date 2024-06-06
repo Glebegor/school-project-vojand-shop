@@ -35,5 +35,13 @@ func (r *ProductRepository) GetById(id int) (models.Product, error) {
 	err := r.db.Get(&data, query)
 	return data, err
 }
-func (r *ProductRepository) Update() {}
-func (r *ProductRepository) Delete() {}
+func (r *ProductRepository) Update(product models.Product, id int) error {
+	query := fmt.Sprintf("UPDATE %s SET title='%s', description='%s', price=%d, images='%s', rating=%d WHERE id=%d", r.table, product.Title, product.Description, product.Price, product.Images, product.Rating, id)
+	_, err := r.db.Exec(query)
+	return err
+}
+func (r *ProductRepository) Delete(id int) error {
+	query := fmt.Sprintf("DELETE FROM %s WHERE id=%d", r.table, id)
+	_, err := r.db.Exec(query)
+	return err
+}

@@ -111,6 +111,29 @@ func (ct *productController) UpdateProduct(c *gin.Context) {
 	return
 }
 func (ct *productController) DeleteProduct(c *gin.Context) {
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: "Invalid input, please check your id",
+			Code:    http.StatusBadRequest,
+		}
+		response.GiveResponse(c)
+		return
+	}
 
+	err = ct.usecase.Delete(id)
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: err.Error(),
+			Code:    http.StatusBadGateway,
+		}
+		response.GiveResponse(c)
+		return
+	}
+
+	response := requests.SuccessResponse{
+		Message: "Deleted product successfully",
+	}
+	response.GiveResponse(c)
 	return
 }

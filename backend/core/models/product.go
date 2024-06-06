@@ -13,13 +13,14 @@ type ProductRepository interface {
 	Create(Product) error
 	GetAll() ([]Product, error)
 	GetById(int) (Product, error)
-	Update()
-	Delete()
+	Update(product Product, id int) error
+	Delete(id int) error
 }
 type ProductUsecase interface {
 	Create(Product) error
 	GetAll() ([]Product, error)
 	GetById(int) (Product, error)
-	Update()
-	Delete()
+	Update(product Product, id int) error
+	Delete(id int) error
+	GetImages() ([]string, error)
 }

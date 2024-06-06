@@ -27,5 +27,14 @@ func (u *ProductUsecase) GetAll() ([]models.Product, error) {
 func (u *ProductUsecase) GetById(id int) (models.Product, error) {
 	return u.repo.GetById(id)
 }
-func (u *ProductUsecase) Update() {}
-func (u *ProductUsecase) Delete() {}
+func (u *ProductUsecase) Update(product models.Product, id int) error {
+
+	return u.repo.Update(product, id)
+}
+func (u *ProductUsecase) Delete(id int) error {
+	return u.repo.Delete(id)
+}
+
+func (u *ProductUsecase) GetImages() ([]string, error) {
+	return nil, nil
+}
