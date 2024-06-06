@@ -1,7 +1,8 @@
-package cmd
+package main
 
+import "fmt"
 
-int main() {
-	  fmt.Println("Hello World")
-	  return;
+func main() {
+	fmt.Println("Hello World")
+	return
 }
