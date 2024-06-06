@@ -1,24 +1,24 @@
 package models
 
 type Product struct {
-	ID          int      `json:"id"`
-	Title       string   `json:"title"`
-	Description string   `json:"description"`
-	Price       int      `json:"price"`
-	images      []string `json:"images"`
-	rating      int      `json:"rating"`
+	ID          int    `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Price       int    `json:"price"`
+	Images      string `json:"images"`
+	Rating      int    `json:"rating"`
 }
 
 type ProductRepository interface {
-	Create()
-	GetAll()
+	Create(Product) error
+	GetAll() ([]Product, error)
 	GetById()
 	Update()
 	Delete()
 }
 type ProductUsecase interface {
-	Create()
-	GetAll()
+	Create(Product) error
+	GetAll() ([]Product, error)
 	GetById()
 	Update()
 	Delete()

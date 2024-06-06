@@ -17,8 +17,13 @@ func NewProductUsecase(repo models.ProductRepository, timeout time.Duration) mod
 	}
 }
 
-func (u *ProductUsecase) Create()  {}
-func (u *ProductUsecase) GetAll()  {}
+func (u *ProductUsecase) Create(product models.Product) error {
+	u.repo.Create(product)
+	return nil
+}
+func (u *ProductUsecase) GetAll() ([]models.Product, error) {
+	return u.repo.GetAll()
+}
 func (u *ProductUsecase) GetById() {}
 func (u *ProductUsecase) Update()  {}
 func (u *ProductUsecase) Delete()  {}
