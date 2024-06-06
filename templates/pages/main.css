@@ -206,6 +206,10 @@ header
     justify-content: space-between;
     transition: .5s;
 }
+header .container {
+    height: 100%;
+}
+
 header.fixed
 {
     background: #0F080F;
@@ -254,7 +258,10 @@ nav a:hover
     transition: .5s;
     color: #E01506;
 }
-
+.logo img{
+    height: 70px;
+    
+}
 /*Main*/
 .container
 {
