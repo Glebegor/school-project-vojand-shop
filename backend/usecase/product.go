@@ -2,16 +2,15 @@ package usecase
 
 import (
 	"anderleshop/core/models"
-	"anderleshop/repository"
 	"time"
 )
 
 type ProductUsecase struct {
-	repo    repository.ProductRepository
+	repo    models.ProductRepository
 	timeout time.Duration
 }
 
-func NewProductUsecase(repo repository.ProductRepository, timeout time.Duration) models.ProductUsecase {
+func NewProductUsecase(repo models.ProductRepository, timeout time.Duration) models.ProductUsecase {
 	return &ProductUsecase{
 		repo:    repo,
 		timeout: timeout,

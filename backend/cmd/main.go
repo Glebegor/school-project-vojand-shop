@@ -1,8 +1,8 @@
 package main
 
 import (
+	"anderleshop/api/controllers"
 	"anderleshop/bootstrap"
-	"anderleshop/controllers"
 	"github.com/gin-gonic/gin"
 	"time"
 )
@@ -15,6 +15,7 @@ func main() {
 	timeout := 10 * time.Second
 
 	controllers.SetupController(config, gin, db, timeout)
+
 	gin.Run(":" + config.ServerPORT)
 	return
 }

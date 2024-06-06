@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func SetupController(config *bootstrap.Config, timeout time.Duration, db *sqlx.DB, gin *gin.Engine) {
+func SetupController(config *bootstrap.Config, gin *gin.Engine, db *sqlx.DB, timeout time.Duration) {
 
 	publicRouter := gin.Group("/api/v1")
 	NewProductController(config, db, publicRouter, timeout)

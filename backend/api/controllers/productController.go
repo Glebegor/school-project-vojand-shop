@@ -15,10 +15,10 @@ type productController struct {
 }
 
 func NewProductController(config *bootstrap.Config, db *sqlx.DB, r *gin.RouterGroup, timeout time.Duration) {
-	repository := repository.NewProductRepository(db)
-	usecase := usecase.NewProductUsecase(repository, timeout)
+	tr := repository.NewProductRepository(db)
+	tu := usecase.NewProductUsecase(tr, timeout)
 	controller := &productController{
-		usecase: usecase,
+		usecase: tu,
 	}
 
 	r.POST("/product", controller.CreateProduct)
