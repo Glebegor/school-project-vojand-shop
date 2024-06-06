@@ -53,6 +53,10 @@ main{
     margin: auto;
     align-items: center;
     color: #ffffff;
+    text-decoration: none;
+}
+#continueButton:hover{
+    background-color: #E01506;
 }
 #total{
     font-size: 24;
