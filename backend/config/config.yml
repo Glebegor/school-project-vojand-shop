@@ -2,6 +2,7 @@
 server:
   host: "localhost"
   port: "5774"
+
 db:
   host: "localhost"
   port: "5436"
