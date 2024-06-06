@@ -31,17 +31,22 @@ func NewProductController(config *bootstrap.Config, db *sqlx.DB, r *gin.RouterGr
 }
 
 func (ct *productController) CreateProduct(c *gin.Context) {
+	var input models.Product
 	return
 }
 func (ct *productController) GetProduct(c *gin.Context) {
+
 	return
 }
 func (ct *productController) GetAllProduct(c *gin.Context) {
+
 	return
 }
 func (ct *productController) UpdateProduct(c *gin.Context) {
+
 	return
 }
 func (ct *productController) DeleteProduct(c *gin.Context) {
+
 	return
 }
