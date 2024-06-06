@@ -1,8 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"anderleshop/bootstrap"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	app := bootstrap.Application{}
+	config := app.Config
+	//db := app.DB
+	gin := gin.Default()
+	//timeout := 10 * time.Second
+
+	gin.Run(":" + config.ServerPORT)
 	return
 }
