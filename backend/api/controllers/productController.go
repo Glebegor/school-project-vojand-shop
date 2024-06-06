@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	"net/http"
+	"strconv"
 	"time"
 )
 
@@ -60,7 +61,31 @@ func (ct *productController) CreateProduct(c *gin.Context) {
 	return
 }
 func (ct *productController) GetProduct(c *gin.Context) {
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: "Invalid input, please check your id",
+			Code:    http.StatusBadRequest,
+		}
+		response.GiveResponse(c)
+		return
+	}
 
+	product, err := ct.usecase.GetById(id)
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: err.Error(),
+			Code:    http.StatusBadGateway,
+		}
+		response.GiveResponse(c)
+		return
+	}
+
+	response := requests.SuccessResponseWithData{
+		Message: "Get product successfully",
+		Data:    product,
+	}
+	response.GiveResponse(c)
 	return
 }
 func (ct *productController) GetAllProduct(c *gin.Context) {

@@ -12,14 +12,14 @@ type Product struct {
 type ProductRepository interface {
 	Create(Product) error
 	GetAll() ([]Product, error)
-	GetById()
+	GetById(int) (Product, error)
 	Update()
 	Delete()
 }
 type ProductUsecase interface {
 	Create(Product) error
 	GetAll() ([]Product, error)
-	GetById()
+	GetById(int) (Product, error)
 	Update()
 	Delete()
 }

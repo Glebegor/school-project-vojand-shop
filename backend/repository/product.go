@@ -29,6 +29,11 @@ func (r *ProductRepository) GetAll() ([]models.Product, error) {
 	err := r.db.Select(&data, query)
 	return data, err
 }
-func (r *ProductRepository) GetById() {}
-func (r *ProductRepository) Update()  {}
-func (r *ProductRepository) Delete()  {}
+func (r *ProductRepository) GetById(id int) (models.Product, error) {
+	var data models.Product
+	query := fmt.Sprintf("SELECT * FROM %s WHERE id = %d", r.table, id)
+	err := r.db.Get(&data, query)
+	return data, err
+}
+func (r *ProductRepository) Update() {}
+func (r *ProductRepository) Delete() {}
