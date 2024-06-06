@@ -8,6 +8,7 @@ import Formula from "./images/formula.jpg";
 
 const Cart = () => {
     useEffect(() => {
+        animate();
         let price = 0;
         let items = document.querySelectorAll(".cartItem");
         items.forEach((item) => {
@@ -26,7 +27,7 @@ const Cart = () => {
         <div className={"cart-wrp"}>
             <div className="container">
                 <div className="__animate__ cart-menu">
-                    <p id="cartName">Cart</p>
+                    <p id="cartName active">Cart</p>
                     <p id="ShippingName">Shipping</p>
                     <p id="PaymentName">Payment</p>
                     <p id="DeliveryInfoName">Delivery information</p>
@@ -36,7 +37,7 @@ const Cart = () => {
                     <div className="cart-items-wrapper">
                         <CartItem title={"RB 23"} rating={6} photo={Formula} price={"15 000 000"}/>
                         <CartItem title={"RB 23"} rating={6} photo={Formula} price={"15 000 000"}/>
-                        <CartItem title={"RB 23"} rating={6} photo={Formula} price={"15 000 000"}/>
+                        <CartItem title={"W 11"} rating={5} photo={Formula} price={"15 000 000"}/>
                         <CartItem title={"RB 23"} rating={6} photo={Formula} price={"15 000 000"}/>
                         <CartItem title={"RB 23"} rating={6} photo={Formula} price={"15 000 000"}/>
 

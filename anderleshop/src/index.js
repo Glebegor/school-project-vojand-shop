@@ -23,6 +23,7 @@ root.render(
           <Route path="/" element={<Home />} />
 
           <Route path="catalogue" element={<Catalogue />} />sss
+          <Route path="catalogueItem" element={<catalogueItem />} />
 
           <Route path="contacts" element={<Contacts />} />
           <Route path="aboutus" element={<AboutUs />} />
@@ -30,7 +31,6 @@ root.render(
           <Route path="cart" element={<Cart />} />
 
 
-          <Route path="catalogueItem" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
