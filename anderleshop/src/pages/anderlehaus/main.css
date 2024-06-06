@@ -1,0 +1,32 @@
+.anderlehaus
+{
+    color: var(--main-white);
+}
+.anderlehaus .container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.anderlehaus-text
+{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.anderlehaus-info-text
+{
+
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.anderlehaus-photo
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.anderlehaus-photo img
+{
+    width: 100%;
+}

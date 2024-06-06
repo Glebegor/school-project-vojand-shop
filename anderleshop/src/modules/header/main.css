@@ -8,7 +8,13 @@
     background: var(--main-black);
 
 }
-
+.header .container .logo {
+    transition: .3s;
+}
+.header .container .logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
 
 .logo {
     height: 75px;

@@ -1,0 +1,39 @@
+.cartItem
+{
+    color: var(--main-black);
+    display: flex;
+    justify-content: space-between;
+    background: var(--main-white);
+    width: 95%;
+    min-height: 140px;
+    margin: 20px;
+}
+.cartItem img
+{
+    width: 55%;
+    height: 100%;
+}
+
+.cartItemDescription
+{
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+}
+.cartItemRating img
+{
+    width: 20px;
+}
+
+.cartItemTitle
+{
+
+}
+.cartItemPrice
+{
+
+}
+.cartItemRating
+{
+
+}

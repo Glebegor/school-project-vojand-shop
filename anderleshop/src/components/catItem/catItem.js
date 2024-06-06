@@ -3,6 +3,7 @@ import "./main.css"
 import Button from "../../ui/button/button";
 import star from "./images/star.png";
 import starAct from "./images/starActive.png";
+import LinkButton from "../linkButton/linkButton";
 const CatItem = ({ img, title, rating, descrition, id , price}) => {
     function checkLen() {
         if (descrition.length > 45) {
@@ -42,7 +43,7 @@ const CatItem = ({ img, title, rating, descrition, id , price}) => {
                         </div>
                     </div>
                     <div className={"catItemButton"}>
-                        <Button title={"Check it"}/>
+                        <LinkButton path={"/catalogueItem/" + id} title={"Check it"}/>
                     </div>
                 </div>
             </div>
