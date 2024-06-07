@@ -17,7 +17,9 @@ func NewProductRepository(db *sqlx.DB, table string) models.ProductRepository {
 		table: table,
 	}
 }
-
+func (r *ProductRepository) GetTable() string {
+	return r.table
+}
 func (r *ProductRepository) Create(product models.Product) error {
 	query := fmt.Sprintf("INSERT INTO %s (title, description, price, images, rating) VALUES ('%s', '%s', %d, '%s', %d)", r.table, product.Title, product.Description, product.Price, product.Images, product.Rating)
 	_, err := r.db.Exec(query)
@@ -35,8 +37,7 @@ func (r *ProductRepository) GetById(id int) (models.Product, error) {
 	err := r.db.Get(&data, query)
 	return data, err
 }
-func (r *ProductRepository) Update(product models.Product, id int) error {
-	query := fmt.Sprintf("UPDATE %s SET title='%s', description='%s', price=%d, images='%s', rating=%d WHERE id=%d", r.table, product.Title, product.Description, product.Price, product.Images, product.Rating, id)
+func (r *ProductRepository) Update(query string, id int) error {
 	_, err := r.db.Exec(query)
 	return err
 }
