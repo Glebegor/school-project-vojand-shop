@@ -46,3 +46,41 @@ func (r *ProductRepository) Delete(id int) error {
 	_, err := r.db.Exec(query)
 	return err
 }
+func (r *ProductRepository) UploadImage(fileName string, id int) error {
+	tx, err := r.db.Begin()
+	if err != nil {
+		return err
+	}
+
+	// Prepare the SELECT query to check if the product exists and get the current images
+	query1 := fmt.Sprintf("SELECT images FROM %s WHERE id = $1", r.table)
+	var existingImages string
+	err = tx.QueryRow(query1, id).Scan(&existingImages)
+	if err != nil {
+		tx.Rollback()
+		return err
+	}
+
+	// Append the new image name to the existing images, separated by a semicolon
+	var newImages string
+	if existingImages == "" {
+		newImages = fileName
+	} else {
+		newImages = existingImages + ";" + fileName
+	}
+
+	// Prepare the UPDATE query to update the images
+	query2 := fmt.Sprintf("UPDATE %s SET images = $1 WHERE id = $2", r.table)
+	_, err = tx.Exec(query2, newImages, id)
+	if err != nil {
+		tx.Rollback()
+		return err
+	}
+
+	err = tx.Commit()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}

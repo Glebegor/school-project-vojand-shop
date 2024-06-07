@@ -6,7 +6,9 @@ import (
 	"fmt"
 	"image"
 	"image/png"
+	"io"
 	"log"
+	"mime/multipart"
 	"os"
 	"strings"
 	"time"
@@ -90,4 +92,30 @@ func (u *ProductUsecase) GetImage(name string) ([]byte, error) {
 
 	imgBytes := buf.Bytes()
 	return imgBytes, nil
+}
+
+func (u *ProductUsecase) PostImage(file *multipart.FileHeader, id int) error {
+	src, err := file.Open()
+	if err != nil {
+		return err
+	}
+	defer src.Close()
+
+	dst, err := os.Create("assets/products/" + file.Filename)
+	if err != nil {
+		return err
+	}
+	defer dst.Close()
+
+	_, err = io.Copy(dst, src)
+	if err != nil {
+		return err
+	}
+
+	err = u.repo.UploadImage(file.Filename, id)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

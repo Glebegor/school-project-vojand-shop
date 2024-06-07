@@ -1,5 +1,7 @@
 package models
 
+import "mime/multipart"
+
 type Product struct {
 	ID          int    `json:"id"`
 	Title       string `json:"title"`
@@ -16,6 +18,7 @@ type ProductRepository interface {
 	Update(string, int) error
 	Delete(int) error
 	GetTable() string
+	UploadImage(fileName string, id int) error
 }
 type ProductUsecase interface {
 	Create(Product) error
@@ -24,4 +27,5 @@ type ProductUsecase interface {
 	Update(Product, int) error
 	Delete(int) error
 	GetImage(string) ([]byte, error)
+	PostImage(file *multipart.FileHeader, id int) error
 }

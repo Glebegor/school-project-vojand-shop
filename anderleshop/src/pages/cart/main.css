@@ -58,3 +58,10 @@
     padding: 20px;
     box-sizing: border-box;
 }
+.cartName.active,
+.ShippingName.active,
+.PaymentName.active,
+.DeliveryInfoName.active
+{
+    color: var(--main-red);
+}

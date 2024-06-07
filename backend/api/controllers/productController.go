@@ -29,8 +29,9 @@ func NewProductController(config *bootstrap.Config, db *sqlx.DB, r *gin.RouterGr
 	r.GET("/product/:id", controller.GetProduct)
 	r.PUT("/product/:id", controller.UpdateProduct)
 	r.DELETE("/product/:id", controller.DeleteProduct)
-	r.GET("/productImage/:name", controller.GetImage)
 
+	r.GET("/productImage/:name", controller.GetImage)
+	r.POST("/productImage/:id", controller.PostImage)
 
 	return
 }
@@ -175,17 +176,56 @@ func (ct *productController) DeleteProduct(c *gin.Context) {
 }
 
 func (ct *productController) GetImage(c *gin.Context) {
-    name := c.Param("name")
-    file, err := ct.usecase.GetImage(name)
-    if err != nil {
-        response := requests.ErrorResponse{
-            Message: err.Error(),
-            Code:    http.StatusBadGateway,
-        }
-        response.GiveResponse(c)
-        return
-    }
+	name := c.Param("name")
+	file, err := ct.usecase.GetImage(name)
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: err.Error(),
+			Code:    http.StatusBadGateway,
+		}
+		response.GiveResponse(c)
+		return
+	}
 
-    c.Data(http.StatusOK, "image/jpeg", file)
-    return
+	c.Data(http.StatusOK, "image/jpeg", file)
+	return
+}
+
+func (ct *productController) PostImage(c *gin.Context) {
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: "Invalid input, please check your id",
+			Code:    http.StatusBadRequest,
+		}
+		response.GiveResponse(c)
+		return
+	}
+
+	file, err := c.FormFile("image")
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: "Invalid input, please check your image key",
+			Code:    http.StatusBadRequest,
+		}
+		response.GiveResponse(c)
+		return
+	}
+
+	err = ct.usecase.PostImage(file, id)
+	if err != nil {
+		response := requests.ErrorResponse{
+			Message: err.Error(),
+			Code:    http.StatusBadGateway,
+		}
+		response.GiveResponse(c)
+		return
+	}
+
+	response := requests.SuccessResponse{
+		Message: "Uploaded image successfully",
+	}
+	response.GiveResponse(c)
+	return
+
 }
