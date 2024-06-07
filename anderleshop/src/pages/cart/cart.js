@@ -27,10 +27,10 @@ const Cart = () => {
         <div className={"cart-wrp"}>
             <div className="container">
                 <div className="__animate__ cart-menu">
-                    <p id="cartName active">Cart</p>
-                    <p id="ShippingName">Shipping</p>
-                    <p id="PaymentName">Payment</p>
-                    <p id="DeliveryInfoName">Delivery information</p>
+                    <p class="cartName active">Cart</p>
+                    <p class="ShippingName">Shipping</p>
+                    <p class="PaymentName">Payment</p>
+                    <p class="DeliveryInfoName">Delivery information</p>
                 </div>
                 <div className="cart-wrapper">
                     <h1 className={"cart-title"}>Your cart</h1>
@@ -44,8 +44,7 @@ const Cart = () => {
                     </div>
                     <div className="cart-info">
                         <div className="cart-total">Total: 0$</div>
-                        <Button title={"Continue"} onClick={() => {
-                        }}/>
+                        <a href={"/shipping"}><Button title={"Continue"} onClick={() => {}}/></a>
                     </div>
                 </div>
             </div>

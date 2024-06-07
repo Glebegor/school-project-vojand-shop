@@ -4,12 +4,12 @@ import Button from "../../ui/button/button";
 import star from "./images/star.png";
 import starAct from "./images/starActive.png";
 import LinkButton from "../linkButton/linkButton";
-const CatItem = ({ img, title, rating, descrition, id , price}) => {
+const CatItem = ({ img, title, rating, description, id , price}) => {
     function checkLen() {
-        if (descrition.length > 45) {
-            return descrition.slice(0, 50) + "...";
-        }else {
-            return descrition;
+        if (description.length > 45) {
+            return description.slice(0, 50) + "...";
+        } else {
+            return description;
         }
     }
     return (

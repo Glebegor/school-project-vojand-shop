@@ -11,6 +11,9 @@ import AboutUs from "./pages/aboutus/aboutUs";
 import Anderlehaus from "./pages/anderlehaus/anderlehaus";
 import Cart from "./pages/cart/cart";
 import CatalogueItem from "./pages/catalogueItem/catalogueItem";
+import Shipping from "./pages/cart/shipping";
+import Payment from "./pages/cart/payment";
+import Delivery from "./pages/cart/delivery";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,7 +32,11 @@ root.render(
           <Route path="contacts" element={<Contacts />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="anderlehaus" element={<Anderlehaus />} />
+
           <Route path="cart" element={<Cart />} />
+          <Route path="shipping" element={<Shipping />} />
+          <Route path="payment" element={<Payment />} />
+          <Route path="delivery" element={<Delivery />} />
 
 
         </Route>

@@ -22,6 +22,8 @@
 }
 .catItemDescrition
 {
+    width: 100%;
+    box-sizing: border-box;
     background: var(--main-white);
     padding: 10px;
     border-bottom-left-radius: 15px;

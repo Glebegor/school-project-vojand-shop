@@ -5,50 +5,59 @@ import logoPhoto from "./images/logo.png";
 import CatItem from "../../components/catItem/catItem";
 import Filters from "../../modules/filters/filters";
 import SliderCatalogue from "../../modules/sliderCatalogue/sliderCatalogue";
-import {useEffect} from "react";
+import { useEffect, useState } from "react";
 import animate from "../../animate";
+import axios from "axios";
 
 const Catalogue = () => {
+    const [products, setProducts] = useState([]);
+
     useEffect(() => {
         animate();
-    }, []); // Empty dependency array ensures this runs only once after component mount
+        axios.get("http://localhost:5774/api/v1/product")
+            .then((response) => {
+                // Assuming response.data is an object with an array under key 'data'
+                const productsData = response.data.data;
+                setProducts(productsData);
+            })
+            .catch((error) => {
+                console.error("Error fetching products:", error);
+            });
+    }, []);
 
     return (
         <div className={"catalogue"}>
-            <SliderCatalogue/>
+            <SliderCatalogue />
             <div className="catalogueShopper container">
                 <div className="catalogueShopperSearcher">
                     <div className="catalogueShopperSearcherFilterBy">Filter by lower Price</div>
                     <div className="catalogueShopperSearcherLogo">
-                        <img src={logoPhoto} alt={"nothing"}/>
+                        <img src={logoPhoto} alt={"nothing"} />
                     </div>
                     <div className="catalogueShopperSearcherWrapper">
-                        <Input placeholder={"Search"}/>
-                        <Button onClick={() => {}} title={"Search"}/>
+                        <Input placeholder={"Search"} />
+                        <Button onClick={() => { }} title={"Search"} />
                     </div>
                 </div>
                 <div className="catalogueShopperFilter">
                     <Filters />
                 </div>
                 <div className="catalogueOrders">
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={6} descrition={"some wqeqweqkop some texte some texte some texte"} id={1}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={4} descrition={"some texte some texte some texte some texte"} id={2}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={5} descrition={"some texte some texte some texte some texte"} id={3}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
-                    <CatItem price={"15 000 000"} img={""} title={"Some text"} rating={3} descrition={"some texte some texte some texte some texte"} id={4}/>
+                    {products.map((product) => (
+                        <CatItem
+                            key={product.id}
+                            img={product.images} // Assuming images key instead of img
+                            title={product.title}
+                            rating={product.rating}
+                            description={product.description}
+                            id={product.id}
+                            price={product.price}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Catalogue;
