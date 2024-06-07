@@ -1,0 +1,46 @@
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    margin: 5px;
+}
+
+.checkbox-input {
+    display: none; /* Hide the default checkbox */
+}
+
+.checkbox-custom {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-color: #f0f0f0; /* Background color of the custom checkbox */
+    border: 2px solid #d0d0d0; /* Border color of the custom checkbox */
+    border-radius: 4px; /* Adjust border radius for rounded corners */
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox-container:hover .checkbox-custom {
+    border-color: #a0a0a0; /* Border color on hover */
+}
+
+.checkbox-input:checked + .checkbox-custom {
+    background-color: var(--main-red); /* Background color when checked */
+    border-color: var(--main-red); /* Border color when checked */
+}
+
+.checkbox-custom::after {
+    content: '';
+    width: 12px; /* Adjust size as needed */
+    height: 12px; /* Adjust size as needed */
+    display: none; /* Hide the checkmark by default */
+    background-color: var(--main-white); /* Checkmark color */
+    clip-path: polygon(14% 44%, 0% 67%, 50% 100%, 100% 17%, 78% 0%, 40% 70%);
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+    display: block; /* Show the checkmark when checked */
+}

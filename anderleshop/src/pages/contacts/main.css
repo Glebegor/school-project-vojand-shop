@@ -1,0 +1,15 @@
+.contacts
+{
+    height: 100vh;
+}
+.contacts .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.contacts a
+{
+    color: var(--main-white);
+}

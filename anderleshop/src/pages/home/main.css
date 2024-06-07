@@ -1,0 +1,89 @@
+.homeMain
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/formula.png");
+    background-blend-mode: multiply;
+    background-color: rgba(15, 8, 15, 0.24);
+    background-size: 100% 120%;
+    background-position: 0px -400px;
+    height: 120vh;
+}
+.homeMain .container,
+.homeQuality .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeQuality .container {
+    align-items: center;
+    justify-content: center;
+}
+.homeContacts .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.homeMain .container .h1,
+.homeQuality .container .h1,
+.homeContacts .container h1{
+    font-weight: 800;
+    font-size: 42px;
+
+    padding-bottom: 20px;
+}
+.homeMain .container button {
+    margin-bottom: 400px;
+    font-size: 16px;
+}
+
+.homeQuality .container button {
+    font-size: 16px;
+}
+
+.homeQuality
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/wheel.png");
+    background-blend-mode: multiply;
+    background-color: rgba(15, 8, 15, 0.65);
+
+    background-size: 100% 100%;
+
+    height: 100vh;
+}
+
+
+.homeComments
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: 0px 0px;
+    height: 50vh;
+
+}
+.homeContacts
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/lando.png");
+    background-size: 100% 100%;
+    background-blend-mode: multiply;
+    background-color: rgba(15, 8, 15, 0.65);
+    background-position: 0px 0px;
+    height: 100vh;
+}
+.homeContacts input {
+    padding: 10px 20px;
+}

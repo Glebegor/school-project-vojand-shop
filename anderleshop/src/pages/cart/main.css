@@ -1,0 +1,67 @@
+.cart-wrp
+{
+    width: 100%;
+    height: 100vh;
+    background: url("./images/AudiF1CarIsGoated.png");
+    background-size: 100% 200%;
+    background-position: 0px -400px;
+}
+.cart-wrp .container
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cart-wrapper
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 40%;
+    height: 500px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: var(--main-black);
+    background: var(--main-white-low);
+}
+.cart-title
+{
+    padding: 20px;
+}
+.cart-info
+{
+    padding: 20px;
+
+}
+.cart-menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin-bottom: 20px;
+}
+.cart-items-wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    background: var(--main-white-lowest);
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.cartName.active,
+.ShippingName.active,
+.PaymentName.active,
+.DeliveryInfoName.active
+{
+    color: var(--main-red);
+}

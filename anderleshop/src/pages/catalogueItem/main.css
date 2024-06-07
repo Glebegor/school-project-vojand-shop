@@ -1,0 +1,103 @@
+.catalogueItem
+{
+    color: var(--main-black);
+    height: 100vh;
+}
+.catalogueItem .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    height: 100%;
+    background: var(--main-white-lowest);
+}
+.catalogueItem .container h1
+{
+    padding-top: 100px;
+    font-size: 56px;
+}
+
+.catalogueItemMain
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+    width: 60%;
+}
+.catalogueItemPhotos
+{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+img.catalogueItemMainPhotos
+{
+    width: 100%;
+    height: 500px;
+    margin: 15px;
+}
+.catalogueItemPhotosSlider
+{
+    width: 100%;
+    overflow:hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+.catalogueItemPhotosSliderTape
+{
+    height: 100%;
+    min-width: 100%;
+}
+.catSliderItem
+{
+    padding: 5px 10px;
+    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+}
+.catSliderItem img
+{
+    width: 100%;
+    height: 100%;
+}
+.catalogueItemDescription
+{
+    height: 100%;
+    width: 40%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.catalogueItemDescriptionText
+{
+    margin: 20px;
+    background: #0000ee;
+    width: 100%;
+    height: 45%;
+    box-sizing: border-box;
+}
+
+.catalogueItemHelpCheckboxes
+{
+    margin: 20px;
+    background: #2c292c;
+    width: 100%;
+    height: 30%;
+}
+.catalogueItemHelpForm
+{
+    margin: 20px;
+    background: #8a838c;
+    width: 100%;
+    height: 25%;
+
+}
