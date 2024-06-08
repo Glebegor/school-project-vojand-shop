@@ -71,3 +71,10 @@
     left: 20px;
     font-size: 36px;
 }
+
+@media (max-width: 768px) {
+
+    .contacts-cart {
+        width: 70%;
+    }
+}

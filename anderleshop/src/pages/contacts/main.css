@@ -13,3 +13,11 @@
 {
     color: var(--main-white);
 }
+
+
+@media (max-width: 1440px) {
+    .contacts .container
+    {
+        flex-direction: column;
+    }
+}

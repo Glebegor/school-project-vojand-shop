@@ -29,22 +29,25 @@
         margin: 0px;
 
     }
-    .textareaWrapper textarea
+    .homeDataa .textareaWrapper textarea
     {
         margin-top: 20px;
         font-size: 56px;
         height: 200px;
     }
-    .inputWrapper
+    .homeDataa .inputWrapper
     {
         width: 100%;
         /*height: 100px;*/
         padding: 20px 0px;
     }
-    .mainButton
+    .homeDataa .mainButton
     {
         font-size: 56px!important;
-        padding: 25px 150px;
+        padding: 25px 100px;
         margin-top: 10px;
+    }
+    .homeDataa a > .mainButton {
+        width: 100%!important;
     }
 }

@@ -11,7 +11,7 @@ const Home = () => {
     }, []); // Empty dependency array ensures this runs only once after component mount
 
     return (
-        <div>
+        <div className={"homeDataa"}>
             <section className={"homeMain"}>
                 <div className={"container __animate__"}>
                     <div className={"h1 long-letters  __animate__"}>The importance of being first</div>

@@ -65,3 +65,21 @@
 {
     color: var(--main-red);
 }
+
+@media (max-width: 1440px) {
+    .cart-wrapper {
+        width: 60%;
+        height: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-menu {
+        width: 100%;
+    }
+    .cart-wrapper {
+        width: 90%;
+        height: 800px;
+    }
+
+}
