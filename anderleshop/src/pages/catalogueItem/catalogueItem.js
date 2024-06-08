@@ -3,6 +3,8 @@ import formula from "./images/formula-fc.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CatSliderItem from "../../components/catSliderItem/catSliderItem";
+import CheckboxFilters from "../../components/checkboxFilters/checkboxFilters";
+import Button from "../../ui/button/button";
 
 const CatalogueItem = () => {
     const [products, setProducts] = useState({});
@@ -55,8 +57,16 @@ const CatalogueItem = () => {
                     </div>
                     <div className="catalogueItemDescription">
                         <div className="catalogueItemDescriptionText">{products.description}</div>
-                        <div className="catalogueItemHelpCheckboxes">checkboxes</div>
-                        <div className="catalogueItemHelpForm">form</div>
+                        <div className="catalogueItemHelpCheckboxes">
+                            <CheckboxFilters label={"Some checkbox"} />
+                            <CheckboxFilters label={"Some checkbox"} />
+                            <CheckboxFilters label={"Some checkbox"} />
+                        </div>
+                        <div className="catalogueItemHelpForm">
+                            Quantity
+                            <input type="number" placeholder={"1"}/>
+                            <Button title={"To cart"}/>
+                        </div>
                     </div>
                 </div>
                 <div className="cataslogueItemMightLike"></div>

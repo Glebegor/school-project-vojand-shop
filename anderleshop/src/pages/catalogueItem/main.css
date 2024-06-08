@@ -80,7 +80,6 @@ img.catalogueItemMainPhotos
 .catalogueItemDescriptionText
 {
     margin: 20px;
-    background: #0000ee;
     width: 100%;
     height: 45%;
     box-sizing: border-box;
@@ -89,15 +88,18 @@ img.catalogueItemMainPhotos
 .catalogueItemHelpCheckboxes
 {
     margin: 20px;
-    background: #2c292c;
     width: 100%;
     height: 30%;
 }
 .catalogueItemHelpForm
 {
     margin: 20px;
-    background: #8a838c;
     width: 100%;
     height: 25%;
 
+}
+
+.catalogueItemHelpForm input
+{
+    width: 18%;
 }

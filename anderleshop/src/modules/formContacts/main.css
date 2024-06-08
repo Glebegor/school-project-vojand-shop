@@ -14,3 +14,37 @@
     margin: 8px 0px;
     width:100%;
 }
+
+
+@media (max-width: 768px) {
+    .contacts-form
+    {
+        width: 100%;
+    }
+    .row-form {
+        display: flex;
+        flex-direction: column;
+        font-size: 56px;
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .textareaWrapper textarea
+    {
+        margin-top: 20px;
+        font-size: 56px;
+        height: 200px;
+    }
+    .inputWrapper
+    {
+        width: 100%;
+        /*height: 100px;*/
+        padding: 20px 0px;
+    }
+    .mainButton
+    {
+        font-size: 56px!important;
+        padding: 25px 150px;
+        margin-top: 10px;
+    }
+}

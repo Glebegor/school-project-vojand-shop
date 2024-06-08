@@ -87,3 +87,24 @@
 .homeContacts input {
     padding: 10px 20px;
 }
+
+@media (max-width: 768px) {
+    .homeMain
+    {
+        background-size: 200% 100%;
+        background-position: -500px -100px;
+    }
+    .homeQuality
+    {
+        background-size: 200% 100%;
+        background-position: -500px 0px;
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        width: 90%;
+    }
+    .h1 {
+        text-align: center;
+    }
+}
