@@ -1,10 +1,16 @@
 #stuff {
-    background-color:#B61105;
-    opacity: 0.2; 
+    background-color:#B6110541;
     margin: auto;
     border-radius: 25px;
-    width: 50%;
-    height: 60%;
+    width: 55%;
+    height: 70%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 #menu{
     display: flex;
@@ -13,5 +19,79 @@
 }
 
 #menu p {
+    padding: 5%;
+}
+#images img{
+    padding-left: 10%;
+    width: 80%;
+    height: 90%;
+    margin: 0%;
+    margin-top: 2%;
+    box-sizing: border-box;
+}
+main{
+    background-image: url("../images/AudiF1CarIsGoated.png");
+    background-position: center;
+    padding-bottom: 20px;
+}
+.imgDescription{
+    background-color: #ffffff;
+    color: black;
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#cartName{
+    color:#E01506;
+    text-decoration: underline;
+}
+#continueButton{
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 2%;
+    margin: auto;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+#continueButton:hover{
+    background-color: #E01506;
+}
+#total{
+    font-size: 24;
+}
+.informationBox{
+    height: 120%;
+    display: flex;
+}
+.productName{
+    vertical-align: text-top;
+    text-align: left;
+    padding: 0%;
+    font-size: 20px;
+    margin: 0%;    
+}
+.Prize{
+    margin: 0;
+    margin-top: 27px;
+}
+.informationBox .removeButton{
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #E01506;
+    background-color: #E01506;
+    color: #ffffff;
+    width: 6%;
+    height: 6%;
+    left: 57%;
+    margin-top: 6%;
+    position: absolute;
+    font-size: 17px;
+    /*flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }

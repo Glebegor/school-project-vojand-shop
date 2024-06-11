@@ -1,0 +1,59 @@
+main{
+    color: white;
+    background-image: url(../images/AudiF1CarIsGoated.png);
+    background-position: center;
+    padding-bottom: 20px;
+}
+#menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#menu p {
+    padding: 5%;
+}
+#PaymentName{
+    color: white;
+    text-decoration: none;
+}
+#DeliveryInfoName{
+    color:#B61105;
+    text-decoration: underline;
+}
+#stuff {
+    background-color:#B6110541;
+    margin: auto;
+    border-radius: 25px;
+    width: 55%;
+    height: 70%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.checkbox{
+    margin-left: 0%;
+    padding: 4%;
+    width: 200px;
+}
+form{
+    justify-content: left;
+}
+#continueButton{
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 2%;
+    margin: 2%;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+#continueButton:hover{
+    background-color: #B61105;
+
+}
