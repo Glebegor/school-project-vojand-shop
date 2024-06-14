@@ -43,6 +43,15 @@ const Catalogue = () => {
                     <Filters />
                 </div>
                 <div className="catalogueOrders">
+                    <CatItem
+                        key={"423"}
+                        img={""} // Assuming images key instead of img
+                        title={"TEST"}
+                        rating={3}
+                        description={"TEST TEST TEST"}
+                        id={"423"}
+                        price={"1000000"}
+                    />
                     {products.map((product) => (
                         <CatItem
                             key={product.id}
