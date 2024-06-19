@@ -44,6 +44,10 @@
     width: 40%;
     margin-bottom: 20px;
 }
+
+.cart-items-wrapper.left {
+    align-items: start!important;
+}
 .cart-items-wrapper
 {
     display: flex;
@@ -58,10 +62,17 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
 .cartName.active,
 .ShippingName.active,
 .PaymentName.active,
 .DeliveryInfoName.active
 {
     color: var(--main-red);
+}
+
+.delivery-form input
+{
+    height: 40px;
+    margin-top: 10px;
 }

@@ -43,17 +43,20 @@ const Catalogue = () => {
                     <Filters />
                 </div>
                 <div className="catalogueOrders">
-                    {products.map((product) => (
-                        <CatItem
-                            key={product.id}
-                            img={product.images} // Assuming images key instead of img
-                            title={product.title}
-                            rating={product.rating}
-                            description={product.description}
-                            id={product.id}
-                            price={product.price}
-                        />
-                    ))}
+                    {/*{products.map((product) => (*/}
+                    {/*    <CatItem*/}
+                    {/*        key={product.id}*/}
+                    {/*        img={product.images} // Assuming images key instead of img*/}
+                    {/*        title={product.title}*/}
+                    {/*        rating={product.rating}*/}
+                    {/*        description={product.description}*/}
+                    {/*        id={product.id}*/}
+                    {/*        price={product.price}*/}
+                    {/*    />*/}
+                    {/*))}*/}
+                    <CatItem key={1} img={"https://via.placeholder.com/150"} title={"Product 1"} rating={5} description={"Description 1"} id={1} price={100} />
+                    <CatItem key={2} img={"https://via.placeholder.com/150"} title={"Product 2"} rating={5} description={"Description 2"} id={1} price={100} />
+                    <CatItem key={3} img={"https://via.placeholder.com/150"} title={"Product 3"} rating={5} description={"Description 2"} id={1} price={100} />
                 </div>
             </div>
         </div>

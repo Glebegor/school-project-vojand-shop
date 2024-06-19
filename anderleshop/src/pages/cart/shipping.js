@@ -5,6 +5,8 @@ import animate from "../../animate";
 import Button from "../../ui/button/button";
 import CartItem from "../../components/cartItem/cartItem";
 import Formula from "./images/formula.jpg";
+import Input from "../../ui/input/input";
+import Checkbox from "../../ui/checkbox/checkbox";
 
 const Shipping = () => {
     useEffect(() => {
@@ -23,9 +25,26 @@ const Shipping = () => {
                     <p className="DeliveryInfoName">Delivery information</p>
                 </div>
                 <div className="cart-wrapper">
-                    <h1 className={"cart-title"}>Shipping</h1>
-                    <div className="cart-items-wrapper"></div>
+                    <h1 className={"cart-title"}>Shipping Place</h1>
+                    <div className="cart-items-wrapper left">
+                        <h1>Anderle Shop</h1>
+                        <Checkbox label={"Anderle Shop Monaco"}/>
+                        <Checkbox label={"Anderle Shop Prague"}/>
+                        <Checkbox label={"Anderle Shop Florida"}/>
+                        <Checkbox label={"Anderle Shop Los Angeles"}/>
+                        <Checkbox label={"Anderle Shop Gothenburg"}/>
+                        <Checkbox label={"Anderle Shop San Francisco"}/>
+                        <Checkbox label={"Anderle Shop Brno"}/>
+
+                        <h1>AnderleHaus</h1>
+                        <Checkbox label={"Anderle Shop Brno"}/>
+
+                        <h1>Home Delivery</h1>
+                        <Checkbox label={"Home Delivery"}/>
+
+                    </div>
                     <div className="cart-info">
+
                     <a href={"/payment"}><Button title={"Continue"} onClick={() => {
                         }}/></a>
                     </div>
